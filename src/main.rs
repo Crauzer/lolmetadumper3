@@ -13,7 +13,7 @@ mod meta_dump;
 
 type MetaVector = meta::RiotVector<&'static meta::Class>;
 
-const PATTERN_CLASSES: &str = r"(?s-u)\x48\x8D\x3D(....)\x89\xDE\xE8....\x48\x83\xC4\x08";
+const PATTERN_CLASSES: &str = r"(?s-u)\x48\x8D\x3D(....)\x48?\x89\xDE\xE8....\x48\x83\xC4\x08\x5B\x5D\xFF\x60\x10";
 
 #[allow(dead_code)]
 const PATTERN_VERSION: &str = r"(?s-u)\x00Releases/(\d+(\.\d+)+)\x00";
